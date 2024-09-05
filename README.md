@@ -6,5 +6,10 @@ Projeto desenvolvido para a disciplina Persistência de Dados (PDD) do curso de 
 
 
 
+As funcionalidades do aplicativo:
 
+![use_cases](https://github.com/user-attachments/assets/2243b5ac-5a60-4fe3-a21e-66a752441823)
+
+
+O AgendaRoom foi desenvolvido utilizando os Componentes de Arquitetura do Android:
 <img src="https://developer.android.com/static/topic/libraries/architecture/images/final-architecture.png?hl=pt-br" />
