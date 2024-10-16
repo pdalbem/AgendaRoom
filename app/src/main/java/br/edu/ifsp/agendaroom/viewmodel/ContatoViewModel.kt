@@ -55,7 +55,7 @@ sealed class ListaState {
 
     fun update(contatoEntity: Contato) = viewModelScope.launch(Dispatchers.IO){
         repository.update(contatoEntity)
-        _stateDetail.value=DetalheState.DeleteSuccess
+        _stateDetail.value=DetalheState.UpdateSuccess
     }
 
     fun delete(contatoEntity: Contato) = viewModelScope.launch(Dispatchers.IO){
