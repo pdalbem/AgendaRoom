@@ -5,6 +5,6 @@ import br.edu.ifsp.agendaroom.data.ContatoDatabase
 import br.edu.ifsp.agendaroom.repository.ContatoRepository
 
 class ContatoApplication:Application() {
-    val database by lazy { ContatoDatabase.getDatabase(this) }
+    private val database by lazy { ContatoDatabase.getDatabase(this) }
     val repository by lazy { ContatoRepository(database.contatoDAO()) }
 }

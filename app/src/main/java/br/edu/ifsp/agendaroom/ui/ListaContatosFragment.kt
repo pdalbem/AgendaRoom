@@ -32,7 +32,7 @@ class ListaContatosFragment : Fragment(){
 
     lateinit var contatoAdapter: ContatoAdapter
 
-    val viewModel : ContatoViewModel by viewModels { ContatoViewModel.contatoViewModelFactory() }
+    private val viewModel : ContatoViewModel by viewModels { ContatoViewModel.contatoViewModelFactory() }
 
 
 
@@ -44,7 +44,7 @@ class ListaContatosFragment : Fragment(){
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentListaContatosBinding.inflate(inflater, container, false)
 
