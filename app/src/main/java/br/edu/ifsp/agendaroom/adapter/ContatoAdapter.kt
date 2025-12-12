@@ -20,9 +20,9 @@ class ContatoAdapter: RecyclerView.Adapter<ContatoAdapter.ContatoViewHolder>(),
     private lateinit var binding: ContatoCelulaBinding
 
 
-  fun updateList(newList: List<Contato> ){
-        contatosLista = newList as ArrayList<Contato>
-        contatosListaFilterable = contatosLista
+    fun updateList(newList: List<Contato>) {
+        contatosLista = ArrayList(newList)
+        contatosListaFilterable = ArrayList(contatosLista)
         notifyDataSetChanged()
     }
 

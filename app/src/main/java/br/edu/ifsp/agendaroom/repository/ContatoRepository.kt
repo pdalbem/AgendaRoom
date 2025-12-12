@@ -32,8 +32,8 @@ class ContatoRepository (private val contatoDAO: ContatoDAO) {
     }
 
 
-    fun getContactById(id: Int): Flow<Contato>{
-        return contatoDAO.getContactById(id).filterNotNull().map {it.toDomain()}
+    fun getContactById(id: Int): Flow<Contato?>{
+        return contatoDAO.getContactById(id).map {it?.toDomain()}
     }
 
 

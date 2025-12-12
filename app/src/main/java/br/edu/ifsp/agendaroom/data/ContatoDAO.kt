@@ -23,7 +23,7 @@ interface ContatoDAO {
     fun getAllContacts(): Flow<List<ContatoEntity>>
 
     @Query("SELECT * FROM contatos WHERE id=:id")
-    fun getContactById(id: Int): Flow<ContatoEntity>
+    fun getContactById(id: Int): Flow<ContatoEntity?>
 
 
 }

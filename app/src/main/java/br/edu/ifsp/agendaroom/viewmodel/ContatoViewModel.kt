@@ -75,16 +75,29 @@ sealed class ListaState {
          }
      }
 
-
      fun getContactById(id: Int) {
          viewModelScope.launch {
              repository.getContactById(id).collect{result->
+                 if (result!=null)
                  _stateDetail.value=  DetalheState.GetByIdSuccess(result)
              }
-
          }
 
      }
+
+/*     fun getContactById(id: Int) {
+         viewModelScope.launch {
+             repository.getContactById(id).collect { result ->
+                 if (result != null) {
+                     _stateDetail.value = DetalheState.GetByIdSuccess(result)
+                 } else {
+                     // O contato foi deletado ou não existe
+                     _stateDetail.value = DetalheState.DeleteSuccess
+                 }
+             }
+         }
+     }*/
+
 
 
      companion object {
